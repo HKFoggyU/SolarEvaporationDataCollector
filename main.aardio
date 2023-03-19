@@ -3,36 +3,35 @@ import win.ui;
 import win.dlg.message;
 import win.inputBox;
 /*DSG{{*/
-mainForm = win.form(text="Solar Evaporation Data Collector";right=820;bottom=592)
+mainForm = win.form(text="Solar Evaporation Data Collector";right=799;bottom=599;max=false;min=1;topmost=1)
 mainForm.add(
-baudrateEdit={cls="edit";text="9600";left=260;top=80;right=380;bottom=107;dl=1;dt=1;edge=1;multiline=1;z=10};
-baudrateText={cls="static";text="Baud rate";left=150;top=80;right=260;bottom=107;center=1;dl=1;dt=1;font=LOGFONT(h=-16;name='Times New Roman';weight=700);transparent=1;z=11};
-closeBtn={cls="button";text="Disconnect";left=120;top=470;right=330;bottom=510;font=LOGFONT(h=-16;name='Times New Roman');z=9};
-combobox={cls="combobox";left=260;top=50;right=380;bottom=76;border=1;dl=1;dt=1;edge=1;font=LOGFONT(h=-16;name='Consolas');items={"COM3"};mode="dropdown";z=6};
-edit={cls="edit";left=400;top=30;right=765;bottom=510;db=1;dl=1;dr=1;dt=1;edge=1;hscroll=1;multiline=1;vscroll=1;z=1};
-filePathStatic={cls="static";left=150;top=520;right=790;bottom=540;center=1;transparent=1;z=21};
-groupbox={cls="groupbox";text="Device";left=50;top=30;right=390;bottom=120;edge=1;font=LOGFONT(h=-24;name='Times New Roman');z=23};
-groupbox2={cls="groupbox";text="Config";left=50;top=130;right=390;bottom=300;edge=1;font=LOGFONT(h=-24;name='Times New Roman');z=24};
-massStrLenEdit={cls="edit";text="8";left=300;top=220;right=350;bottom=247;dl=1;dt=1;edge=1;multiline=1;z=17};
-openBtn={cls="button";text="Connect";left=120;top=370;right=330;bottom=410;font=LOGFONT(h=-16;name='Times New Roman');z=8};
-progress={cls="progress";left=30;top=550;right=790;bottom=570;edge=1;max=100;min=0;z=16};
-settingBtn={cls="button";text="Apply setting";left=120;top=320;right=330;bottom=360;color=255;db=1;dl=1;font=LOGFONT(h=-16;name='Times New Roman');z=5};
-startBtn={cls="button";text="Start";left=120;top=420;right=330;bottom=460;font=LOGFONT(h=-29;name='Times New Roman';weight=700);z=12};
+baudrateEdit={cls="edit";text="9600";left=290;top=80;right=370;bottom=107;dl=1;dt=1;edge=1;multiline=1;z=9};
+baudrateText={cls="static";text="Baud rate";left=150;top=80;right=280;bottom=107;center=1;dl=1;dt=1;font=LOGFONT(h=-16;name='Times New Roman';weight=700);transparent=1;z=10};
+clearEditBtn={cls="button";text="Clear";left=390;top=470;right=760;bottom=510;db=1;dl=1;dr=1;font=LOGFONT(h=-16;name='Times New Roman');z=27};
+closeBtn={cls="button";text="Disconnect && Stop";left=110;top=470;right=320;bottom=510;db=1;disabled=1;dl=1;font=LOGFONT(h=-21;name='Times New Roman');z=8};
+combobox={cls="combobox";left=290;top=50;right=370;bottom=76;border=1;dl=1;dt=1;edge=1;font=LOGFONT(h=-16;name='Consolas');items={"COM3"};mode="dropdown";z=6};
+edit={cls="edit";left=390;top=30;right=760;bottom=460;db=1;dl=1;dr=1;dt=1;edge=1;hscroll=1;multiline=1;vscroll=1;z=1};
+filePathStatic={cls="static";left=170;top=530;right=780;bottom=550;center=1;db=1;dl=1;dr=1;transparent=1;z=20};
+groupbox={cls="groupbox";text="Device";left=40;top=30;right=380;bottom=120;dl=1;dt=1;edge=1;font=LOGFONT(h=-24;name='Times New Roman');z=22};
+groupbox2={cls="groupbox";text="Config";left=40;top=130;right=380;bottom=290;db=1;dl=1;dt=1;edge=1;font=LOGFONT(h=-24;name='Times New Roman');z=23};
+massStrLenEdit={cls="edit";text="7";left=290;top=210;right=340;bottom=237;dl=1;dt=1;edge=1;multiline=1;z=16};
+progress={cls="progress";left=40;top=550;right=760;bottom=570;db=1;dl=1;dr=1;edge=1;max=100;min=0;z=15};
+settingBtn={cls="button";text="Apply settings";left=110;top=330;right=320;bottom=370;db=1;dl=1;font=LOGFONT(h=-21;name='Times New Roman');z=5};
+startBtn={cls="button";text="Connect && Start";left=110;top=400;right=320;bottom=440;db=1;dl=1;font=LOGFONT(h=-24;name='Times New Roman';weight=700);z=11};
 static={cls="static";text="Time step";left=150;top=150;right=260;bottom=177;center=1;dl=1;dt=1;font=LOGFONT(h=-16;name='Times New Roman';weight=700);transparent=1;z=3};
-static10={cls="static";text="CSV file saved as:";left=30;top=520;right=150;bottom=540;center=1;dl=1;dt=1;font=LOGFONT(h=-15;name='Times New Roman');transparent=1;z=22};
-static13={cls="static";text='1\u261E';left=90;top=320;right=120;bottom=360;align="center";center=1;font=LOGFONT(h=-24;name='Times New Roman';weight=700);transparent=1;z=25};
-static14={cls="static";text='2\u261E';left=90;top=370;right=120;bottom=410;align="center";center=1;font=LOGFONT(h=-24;name='Times New Roman';weight=700);transparent=1;z=26};
-static15={cls="static";text='3\u261E';left=90;top=420;right=120;bottom=460;align="center";center=1;font=LOGFONT(h=-24;name='Times New Roman';weight=700);transparent=1;z=27};
-static16={cls="static";text='4\u261E';left=90;top=470;right=120;bottom=510;align="center";center=1;font=LOGFONT(h=-24;name='Times New Roman';weight=700);transparent=1;z=28};
-static2={cls="static";text="s";left=350;top=150;right=380;bottom=180;align="center";center=1;dl=1;dt=1;transparent=1;z=4};
-static3={cls="static";text="Port number";left=150;top=50;right=260;bottom=76;center=1;dl=1;dt=1;font=LOGFONT(h=-16;name='Times New Roman';weight=700);transparent=1;z=7};
-static4={cls="static";text="Total time";left=150;top=180;right=260;bottom=207;center=1;dl=1;dt=1;font=LOGFONT(h=-16;name='Times New Roman';weight=700);transparent=1;z=14};
-static5={cls="static";text="min";left=350;top=180;right=380;bottom=207;align="center";center=1;dl=1;dt=1;transparent=1;z=15};
-static7={cls="static";text="Mass string length";left=150;top=220;right=280;bottom=247;center=1;dl=1;dt=1;font=LOGFONT(h=-16;name='Times New Roman';weight=700);notify=1;transparent=1;z=18};
-static8={cls="static";text="Example:  123.4567g  is  8";left=150;top=250;right=380;bottom=270;center=1;font=LOGFONT(h=-15;name='Times New Roman');notify=1;transparent=1;z=19};
-static9={cls="static";text="Example:  12.3456g    is  7";left=150;top=270;right=380;bottom=290;center=1;font=LOGFONT(h=-15;name='Times New Roman');notify=1;transparent=1;z=20};
-timeStepEdit={cls="edit";text="10";left=300;top=150;right=350;bottom=177;dl=1;dt=1;edge=1;multiline=1;z=2};
-totalMinEdit={cls="edit";text="180";left=300;top=180;right=350;bottom=207;dl=1;dt=1;edge=1;multiline=1;z=13}
+static10={cls="static";text="CSV file saved as:";left=40;top=530;right=160;bottom=550;center=1;db=1;dl=1;font=LOGFONT(h=-15;name='Times New Roman');transparent=1;z=21};
+static13={cls="static";text='1\u261E';left=80;top=330;right=110;bottom=370;align="center";center=1;db=1;dl=1;font=LOGFONT(h=-24;name='Times New Roman';weight=700);transparent=1;z=24};
+static15={cls="static";text='2\u261E';left=80;top=400;right=110;bottom=440;align="center";center=1;db=1;dl=1;font=LOGFONT(h=-24;name='Times New Roman';weight=700);transparent=1;z=25};
+static16={cls="static";text='3\u261E';left=80;top=470;right=110;bottom=510;align="center";center=1;db=1;dl=1;font=LOGFONT(h=-24;name='Times New Roman';weight=700);transparent=1;z=26};
+static2={cls="static";text="s";left=340;top=150;right=370;bottom=180;align="center";center=1;dl=1;dt=1;transparent=1;z=4};
+static3={cls="static";text="Port number";left=150;top=50;right=280;bottom=76;center=1;dl=1;dt=1;font=LOGFONT(h=-16;name='Times New Roman';weight=700);transparent=1;z=7};
+static4={cls="static";text="Total time";left=150;top=180;right=260;bottom=207;center=1;dl=1;dt=1;font=LOGFONT(h=-16;name='Times New Roman';weight=700);transparent=1;z=13};
+static5={cls="static";text="min";left=340;top=180;right=370;bottom=207;align="center";center=1;dl=1;dt=1;transparent=1;z=14};
+static7={cls="static";text="Mass string length";left=150;top=210;right=280;bottom=237;center=1;dl=1;dt=1;font=LOGFONT(h=-16;name='Times New Roman';weight=700);notify=1;transparent=1;z=17};
+static8={cls="static";text="Example:  123.4567  is  8";left=150;top=240;right=380;bottom=260;center=1;dl=1;dt=1;font=LOGFONT(h=-15;name='Times New Roman');notify=1;transparent=1;z=18};
+static9={cls="static";text="Example:  12.3456    is  7";left=150;top=260;right=380;bottom=280;center=1;dl=1;dt=1;font=LOGFONT(h=-15;name='Times New Roman');notify=1;transparent=1;z=19};
+timeStepEdit={cls="edit";text="10";left=290;top=150;right=340;bottom=177;dl=1;dt=1;edge=1;multiline=1;z=2};
+totalMinEdit={cls="edit";text="180";left=290;top=180;right=340;bottom=207;dl=1;dt=1;edge=1;multiline=1;z=12}
 )
 /*}}*/
 
@@ -40,7 +39,7 @@ import sys.comPort;
 import sio;
 
 function processSIORawText(inputStr){
-	var outputStr = "111.1111g";
+	var outputStr = "";
 	i,j = string.find(tostring(inputStr), "\d\d+\.\d\d\d\dg");
 	if (i) {
 		outputStr = string.trim(string.slice(tostring(inputStr), i, j), "g");
@@ -78,16 +77,6 @@ function closeSerialPort(timeout=250) {
 var comPorts = sys.comPort.list();
 mainForm.combobox.items = comPorts;
 mainForm.combobox.selIndex = 1; 
-// Serial IO operations
-// Open port
-mainForm.openBtn.oncommand = function(id,event){
-	openSerialPort();
-}
-
-// Close port
-mainForm.closeBtn.oncommand = function(id,event){
-	closeSerialPort();
-}
 /* ************************************************ */
 
 
@@ -104,8 +93,23 @@ mainForm.settingBtn.oncommand = function(id,event){
     mainForm.msgbox(settingStr, "Confirm?");
 }
 
+mainForm.clearEditBtn.oncommand = function(id,event){
+	mainForm.edit.text = "";
+}
+
+..closeTriggered = false;
+mainForm.closeBtn.oncommand = function(id,event){
+	..closeTriggered = true;
+	mainForm.settingBtn.disabled = false;
+	mainForm.startBtn.disabled   = false;
+	mainForm.closeBtn.disabled   = true;
+}
+
 mainForm.startBtn.oncommand = function(id,event){
-	mainForm.startBtn.disabled = true;
+	openSerialPort();
+	mainForm.settingBtn.disabled = true;
+	mainForm.startBtn.disabled   = true;
+	mainForm.closeBtn.disabled   = false;
 	filepath = io.fullpath(tostring(time(time.now(), "%Y%m%d_%H%M%S")) ++ "_" ++ math.round(..totalSeconds/3600) ++ "h.csv");
 	mainForm.filePathStatic.text = filepath;
 	var fileHeadLine = "Time/s, Mass/g, Timestamp";
@@ -114,11 +118,15 @@ mainForm.startBtn.oncommand = function(id,event){
 	file.write(fileHeadLine+'\n');
 	file.flush();
 	file.close();
-	//for (i=0;..totalSeconds;..timestep) {
 	while (timePassed <= totalSeconds) {
+		if (..closeTriggered) {
+			mainForm.progress.pos = 0;
+			break;
+		}
 		mainForm.progress.pos = 100*tonumber(..timePassed/..totalSeconds);
 		var sioText = ..sioPort.read(30);
 		var outputStr = processSIORawText(tostring(sioText));
+		// Judge whether to close port & stop
 		if (string.len(outputStr) == ..massStrLen) {
 			outputLine = string.concat(tostring(..timePassed), ", ", outputStr, ", ", tostring(time(time.now(), "%Y%m%d-%H:%M:%S")));
 			mainForm.edit.print(outputLine);
@@ -128,13 +136,15 @@ mainForm.startBtn.oncommand = function(id,event){
 			file.close();
 		}
 		else {
+			outputLine = string.concat("Invalid data, retrying...");
+			mainForm.edit.print(outputLine);
 			continue;
 		}
 		..timePassed += timestep;                       // in seconds   
 		win.delay(1000*tonumber(timestep));             // in milliseconds
 	}
 	closeSerialPort();
-	mainForm.msgbox("Completed");
+	mainForm.msgbox("Ended.");
 }
 
 // Main run
